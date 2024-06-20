@@ -17,6 +17,10 @@ function Hero() {
             router.replace('/sign-in')
         }
     }
+
+    const goToSignIn =() =>{
+        router.replace('/sign-in')
+    }
     return (
         <section className="bg-white flex flex-col items-center justify-center w-full h-full">
             <div className="mx-auto max-w-screen-xl px-4 py-28  ">
@@ -53,12 +57,12 @@ function Hero() {
                     </p>
 
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <Link href={'sign-in'}>
-                        <Button className="hover:text-gray-100">Get Started now</Button>
-                        </Link>
+                        
+                        <Button className="hover:text-gray-100" onClick={() => goToSignIn()}>Get Started now</Button>
+                        
                        
                         <Button variant="outline" className="shadow-lg" onClick={()=>goToDashboard()}>Go to Dashboard</Button>
-                      
+                     
                     </div>
                 </div>
             </div>
